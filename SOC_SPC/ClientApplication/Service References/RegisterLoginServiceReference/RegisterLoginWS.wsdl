@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="registerSupplier">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supplierId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="supplierName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="supCompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telephone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerSupplierResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerSupplierResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerWarehouseStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseStaffId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseEmployeeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehousePassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseUserType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouseTelephone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerWarehouseStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerWarehouseStaffResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerPharmacyStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyStaffId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyEmployeeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyUserType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyTelephone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerPharmacyStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerPharmacyStaffResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSupplierId">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoSupplierIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoSupplierIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoWarehouseStaffId">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoWarehouseStaffIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoWarehouseStaffIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoPharmacyStaffId">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoPharmacyStaffIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoPharmacyStaffIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registerSupplierSoapIn">
+    <wsdl:part name="parameters" element="tns:registerSupplier" />
+  </wsdl:message>
+  <wsdl:message name="registerSupplierSoapOut">
+    <wsdl:part name="parameters" element="tns:registerSupplierResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerWarehouseStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:registerWarehouseStaff" />
+  </wsdl:message>
+  <wsdl:message name="registerWarehouseStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:registerWarehouseStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerPharmacyStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:registerPharmacyStaff" />
+  </wsdl:message>
+  <wsdl:message name="registerPharmacyStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:registerPharmacyStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoSupplierIdSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoSupplierId" />
+  </wsdl:message>
+  <wsdl:message name="AutoSupplierIdSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoSupplierIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoWarehouseStaffIdSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoWarehouseStaffId" />
+  </wsdl:message>
+  <wsdl:message name="AutoWarehouseStaffIdSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoWarehouseStaffIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoPharmacyStaffIdSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoPharmacyStaffId" />
+  </wsdl:message>
+  <wsdl:message name="AutoPharmacyStaffIdSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoPharmacyStaffIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RegisterLoginWSSoap">
+    <wsdl:operation name="registerSupplier">
+      <wsdl:input message="tns:registerSupplierSoapIn" />
+      <wsdl:output message="tns:registerSupplierSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registerWarehouseStaff">
+      <wsdl:input message="tns:registerWarehouseStaffSoapIn" />
+      <wsdl:output message="tns:registerWarehouseStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registerPharmacyStaff">
+      <wsdl:input message="tns:registerPharmacyStaffSoapIn" />
+      <wsdl:output message="tns:registerPharmacyStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoSupplierId">
+      <wsdl:input message="tns:AutoSupplierIdSoapIn" />
+      <wsdl:output message="tns:AutoSupplierIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoWarehouseStaffId">
+      <wsdl:input message="tns:AutoWarehouseStaffIdSoapIn" />
+      <wsdl:output message="tns:AutoWarehouseStaffIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoPharmacyStaffId">
+      <wsdl:input message="tns:AutoPharmacyStaffIdSoapIn" />
+      <wsdl:output message="tns:AutoPharmacyStaffIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegisterLoginWSSoap" type="tns:RegisterLoginWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerSupplier">
+      <soap:operation soapAction="http://tempuri.org/registerSupplier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerWarehouseStaff">
+      <soap:operation soapAction="http://tempuri.org/registerWarehouseStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerPharmacyStaff">
+      <soap:operation soapAction="http://tempuri.org/registerPharmacyStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSupplierId">
+      <soap:operation soapAction="http://tempuri.org/AutoSupplierId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoWarehouseStaffId">
+      <soap:operation soapAction="http://tempuri.org/AutoWarehouseStaffId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoPharmacyStaffId">
+      <soap:operation soapAction="http://tempuri.org/AutoPharmacyStaffId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RegisterLoginWSSoap12" type="tns:RegisterLoginWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerSupplier">
+      <soap12:operation soapAction="http://tempuri.org/registerSupplier" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerWarehouseStaff">
+      <soap12:operation soapAction="http://tempuri.org/registerWarehouseStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerPharmacyStaff">
+      <soap12:operation soapAction="http://tempuri.org/registerPharmacyStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSupplierId">
+      <soap12:operation soapAction="http://tempuri.org/AutoSupplierId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoWarehouseStaffId">
+      <soap12:operation soapAction="http://tempuri.org/AutoWarehouseStaffId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoPharmacyStaffId">
+      <soap12:operation soapAction="http://tempuri.org/AutoPharmacyStaffId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegisterLoginWS">
+    <wsdl:port name="RegisterLoginWSSoap" binding="tns:RegisterLoginWSSoap">
+      <soap:address location="http://localhost:58443/RegisterLoginWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RegisterLoginWSSoap12" binding="tns:RegisterLoginWSSoap12">
+      <soap12:address location="http://localhost:58443/RegisterLoginWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
